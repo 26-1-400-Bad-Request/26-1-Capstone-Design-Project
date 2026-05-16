@@ -1,0 +1,136 @@
+편의시설_설치_대상시설:
+  # 1. 공원
+  공원:
+    is_required: true
+
+  # 2. 공공건물 및 공중이용시설
+  제1종근린생활시설:
+    수퍼마켓_일용품소매점:
+      min_area_sqm: 50
+      max_area_sqm: 1000 # 1000 미만
+    휴게음식점_제과점:
+      min_area_sqm: 50
+      max_area_sqm: 300 # 300 미만
+    이용원_미용원:
+      min_area_sqm: 50
+    목욕장:
+      min_area_sqm: 300
+    공공기관_지사_보건소_도서관_파출소등:
+      max_area_sqm: 1000 # 1000 미만
+    의원_치과의원_한의원_조산원_산후조리원:
+      min_area_sqm: 100
+    지역아동센터:
+      min_area_sqm: 300
+    대피소: 
+      is_required: true
+    공중화장실: 
+      is_required: true
+
+  제2종근린생활시설:
+    일반음식점:
+      min_area_sqm: 50
+    휴게음식점_제과점:
+      min_area_sqm: 300
+    공연장:
+      min_area_sqm: 300 # 관람석 바닥면적 기준
+      max_area_sqm: 500 # 500 미만
+    안마시술소:
+      min_area_sqm: 500
+
+  문화_및_집회시설:
+    공연장:
+      min_area_sqm: 500 # 관람석 바닥면적 기준
+    집회장_예식장_회의장:
+      min_area_sqm: 500
+    전시장_박물관_미술관:
+      min_area_sqm: 500
+    동식물원:
+      min_area_sqm: 300
+    관람장_경마장_자동차경기장: 
+      is_required: true
+
+  종교시설:
+    종교집회장_교회_성당_사찰:
+      min_area_sqm: 500
+
+  판매시설:
+    도매시장_소매시장_상점:
+      min_area_sqm: 1000
+
+  의료시설:
+    병원_종합병원_요양병원_치과병원등: 
+      is_required: true
+    격리병원: 
+      is_required: true
+
+  교육연구시설:
+    교육원_직업훈련소_학원:
+      min_area_sqm: 500
+    도서관:
+      min_area_sqm: 1000
+    학교_유치원_초중고_대학교: 
+      is_required: true
+
+  노유자시설:
+    아동관련시설_어린이집등: 
+      is_required: true
+    노인복지시설_장애인복지시설: 
+      is_required: true
+    사회복지시설: 
+      is_required: true
+
+  수련시설:
+    생활권_자연권_수련시설: 
+      is_required: true
+
+  운동시설:
+    체육관_운동장:
+      min_area_sqm: 500
+
+  업무시설:
+    일반업무시설_금융업소_사무소_오피스텔등:
+      min_area_sqm: 500
+    특정공공기관_건보공단_국민연금_근로복지공단지사:
+      min_area_sqm: 1000
+    공공업무시설_국가_지자체청사: 
+      is_required: true
+
+  숙박시설:
+    일반숙박시설_생활숙박시설:
+      min_rooms: 30 # 객실 수 기준
+    관광숙박시설_관광호텔_휴양콘도미니엄등: 
+      is_required: true
+
+  기타_특수시설:
+    공장:
+      mandatory_condition: "장애인고용의무가 있는 사업주가 운영하는 시설"
+    방송통신시설_방송국_전신전화국:
+      min_area_sqm: 1000
+    관광휴게시설_야외음악당_야외극장:
+      min_area_sqm: 1000
+    관광휴게시설_휴게소:
+      min_area_sqm: 300
+    장례식장:
+      min_area_sqm: 500 # 의료기관 부수시설 제외
+    자동차관련시설_주차장_운전학원: 
+      is_required: true
+    교정시설_교도소_구치소: 
+      is_required: true
+    묘지관련시설_화장시설_봉안당: 
+      is_required: true
+
+  # 3. 공동주택
+  공동주택:
+    아파트: 
+      is_required: true
+    연립주택:
+      min_households: 10 # 세대수 기준
+    다세대주택:
+      min_households: 10 # 세대수 기준
+    기숙사:
+      min_occupants: 30 # 수용 인원 기준
+
+  # 4. 통신시설
+  통신시설:
+    공중전화_우체통: 
+      is_required: true
