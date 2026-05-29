@@ -1,11 +1,9 @@
-# src/main.py
 import os
 import sys
 import streamlit as st
 from pathlib import Path
 
-# 경로 설정
-sys.path.append(str(Path(__file__).resolve().parent.parent))
+sys.path.append(str(Path(__file__).resolve().parent.parent))        
 from src.rag import create_rag_chain
 
 st.set_page_config(page_title="건축 인허가 AI (Ollama)", page_icon="🏢", layout="wide")
@@ -16,8 +14,7 @@ if "messages" not in st.session_state:
 # 사이드바
 with st.sidebar:
     st.header("🦙 Ollama 설정")
-    # 사용 중인 Ollama 모델 이름을 적어주세요 (예: eeve-korean, llama3, gemma2 등)
-    model_option = st.text_input("사용할 Ollama 모델명", value="exaone3.5:7.8b")
+    model_option = st.text_input("사용할 Ollama 모델명", value="exaone3.5:7.8b")        # 사용중인 모델명 작성 
     search_k = st.slider("참조 문서 개수", 1, 10, 4)
     st.info("Ollama가 PC에서 실행 중이어야 합니다.")
     
