@@ -1,9 +1,8 @@
-# src/rag.py
 from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
-from langchain_ollama import ChatOllama # <== HuggingFace 대신 OllamaEmbeddings 사용
+from langchain_ollama import ChatOllama                 # HuggingFaceEmbeddings 대신 OllamaEmbeddings 사용
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
 from src.config import CHROMA_DIR, EMBEDDING_MODEL_NAME, SYSTEM_PROMPT, OLLAMA_MODEL, TEMPERATURE, format_docs
